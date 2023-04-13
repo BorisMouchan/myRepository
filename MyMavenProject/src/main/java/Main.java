@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        int[] array = new int[1000];
+        int[] array = new int[100];
         Random random = new Random();
         for (int i=0; i< array.length;i++) {
             array[i]= random.nextInt(10000);
@@ -36,8 +36,8 @@ public class Main {
         merge(array,left,right);
     }
     public static void merge(int[] array, int[] left, int[] right) {
-        int leftLength = left.length;
-        int rightLength = right.length;
+        int leftLength = array.length/2;
+        int rightLength = array.length-leftLength;
 
         int i=0;
         int j=0;
