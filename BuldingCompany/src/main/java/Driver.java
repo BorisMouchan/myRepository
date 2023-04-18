@@ -1,14 +1,13 @@
-public class Driver extends Worker{
+public class Driver extends Employee{
 
     private boolean alcoholFree;
     private DriveCategory driveCategory;
 
-    public Driver(String workerName, int workerAge, int workerGrowth, boolean alcoholFree, DriveCategory driveCategory) {
-        super(workerName, workerAge, workerGrowth);
+    public Driver(String personName, int personAge, int salary, int id, int employeeGrowth, boolean alcoholFree, DriveCategory driveCategory) {
+        super(personName, personAge, salary, id, employeeGrowth);
         this.alcoholFree = alcoholFree;
         this.driveCategory = driveCategory;
     }
-
 
     public boolean isAlcoholFree() {
         return alcoholFree;

@@ -1,7 +1,13 @@
-public class Crane extends Machine{
+public class Crane extends Vehicles{
 
     private int maxHeight;
     private int maxWeightToUp;
+
+    public Crane(String vehicleName, int purchaseYear, boolean warranty, int maxHeight, int maxWeightToUp) {
+        super(vehicleName, purchaseYear, warranty);
+        this.maxHeight = maxHeight;
+        this.maxWeightToUp = maxWeightToUp;
+    }
 
     public int getMaxHeight() {
         return maxHeight;
@@ -19,10 +25,5 @@ public class Crane extends Machine{
         this.maxWeightToUp = maxWeightToUp;
     }
 
-    public Crane(String manufacterName, int purchaseYear, int warranty, int maxHeight, int maxWeightToUp) {
-        super(manufacterName, purchaseYear, warranty);
-        this.maxHeight = maxHeight;
-        this.maxWeightToUp = maxWeightToUp;
-    }
 
 }

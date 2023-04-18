@@ -1,4 +1,4 @@
-public class ArchiveData extends StructureUnit{
+public abstract class ArchiveData extends Department{
     public static int totalProjectsDone;
     public static int totalProjectsCost;
 

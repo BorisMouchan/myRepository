@@ -1,9 +1,9 @@
-public class Accounting extends StructureUnit{
+public abstract class AccountingDepartment extends Department{
 
     private int dayOfSalary;
     private int monthSalary;
 
-    public Accounting(String structureName, int employersNumber, int dayOfSalary, int monthSalary) {
+    public AccountingDepartment(String structureName, int employersNumber, int dayOfSalary, int monthSalary) {
         super(structureName, employersNumber);
         this.dayOfSalary = dayOfSalary;
         this.monthSalary = monthSalary;
@@ -24,5 +24,4 @@ public class Accounting extends StructureUnit{
     public void setMonthSalary(int monthSalary) {
         this.monthSalary = monthSalary;
     }
-
 }

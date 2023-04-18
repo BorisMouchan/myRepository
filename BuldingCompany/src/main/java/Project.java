@@ -3,8 +3,14 @@ public class Project {
     private String projectName;
     private ProjectType projectType;
     private int projectCost;
-    private String architectorName;
+    private Architector architectorName;
 
+    public Project(String projectName, ProjectType projectType, int projectCost, Architector architectorName) {
+        this.projectName = projectName;
+        this.projectType = projectType;
+        this.projectCost = projectCost;
+        this.architectorName = architectorName;
+    }
     public String getProjectName() {
         return projectName;
     }
@@ -29,23 +35,18 @@ public class Project {
         this.projectCost = projectCost;
     }
 
-    public String getArchitectorName() {
+    public Architector getArchitectorName() {
         return architectorName;
     }
 
-    public void setArchitectorName(String architectorName) {
+    public void setArchitectorName(Architector architectorName) {
         this.architectorName = architectorName;
     }
 
-    public Project(String projectName, ProjectType projectType, int projectCost, String architectorName) {
-        this.projectName = projectName;
-        this.projectType = projectType;
-        this.projectCost = projectCost;
-        this.architectorName = architectorName;
-    }
     @Override
     public String toString() {
         return "название проекта " + projectName + "\n" +"тип дома " + projectType + "\n" + "стоимость проекта " + projectCost
                 + "\n" + "имя архитектора " + architectorName;
     }
 }
+

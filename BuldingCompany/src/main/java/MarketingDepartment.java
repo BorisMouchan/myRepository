@@ -1,12 +1,11 @@
-public class Marketing extends StructureUnit{
+public abstract class MarketingDepartment extends Department{
 
-    private int activeAdvertisingCount;
+    private static int activeAdvertisingCount;
     private int totalAdvertisingCost;
     public AdvertisingType advertisingType;
 
-    public Marketing(String structureName, int employersNumber, int activeAdvertisingCount, int totalAdvertisingCost, AdvertisingType advertisingType) {
+    public MarketingDepartment(String structureName, int employersNumber, int totalAdvertisingCost, AdvertisingType advertisingType) {
         super(structureName, employersNumber);
-        this.activeAdvertisingCount = activeAdvertisingCount;
         this.totalAdvertisingCost = totalAdvertisingCost;
         this.advertisingType = advertisingType;
     }

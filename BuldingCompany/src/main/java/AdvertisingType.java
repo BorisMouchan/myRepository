@@ -1,5 +1,8 @@
 public enum AdvertisingType {
     GOOGLE,
     FACEBOOK,
-    INSTAGRAM
+    INSTAGRAM;
+
+    AdvertisingType() {
+    }
 }

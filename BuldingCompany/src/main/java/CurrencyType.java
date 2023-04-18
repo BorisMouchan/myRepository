@@ -1,5 +1,8 @@
 public enum CurrencyType {
     USD,
     EUR,
-    CNY
+    CNY;
+
+    CurrencyType() {
+    }
 }

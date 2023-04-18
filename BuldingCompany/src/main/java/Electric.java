@@ -1,11 +1,11 @@
-public class Electric extends Worker {
+public class Electric extends Employee {
 
     private boolean insurance;
     private boolean accreditation;
     private int worksYearExperience;
 
-    public Electric(String workerName, int workerAge, int workerGrowth, boolean insurance, boolean accreditation, int worksYearExperience) {
-        super(workerName, workerAge, workerGrowth);
+    public Electric(String personName, int personAge, int salary, int id, int employeeGrowth, boolean insurance, boolean accreditation, int worksYearExperience) {
+        super(personName, personAge, salary, id, employeeGrowth);
         this.insurance = insurance;
         this.accreditation = accreditation;
         this.worksYearExperience = worksYearExperience;

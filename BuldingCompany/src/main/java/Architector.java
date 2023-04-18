@@ -1,8 +1,13 @@
-public class Architector extends Worker{
+public class Architector extends Employee{
 
     private boolean autocadUsing;
     private int projectDone;
-    private int salary;
+
+    public Architector(String personName, int personAge, int salary, int id, int employeeGrowth, boolean autocadUsing, int projectDone) {
+        super(personName, personAge, salary, id, employeeGrowth);
+        this.autocadUsing = autocadUsing;
+        this.projectDone = projectDone;
+    }
 
     public boolean isAutocadUsing() {
         return autocadUsing;
@@ -19,22 +24,6 @@ public class Architector extends Worker{
     public void setProjectDone(int projectDone) {
         this.projectDone = projectDone;
     }
-
-    public int getSalary() {
-        return salary;
-    }
-
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
-
-    public Architector(String workerName, int workerAge, int workerGrowth, boolean autocadUsing, int projectDone, int salary) {
-        super(workerName, workerAge, workerGrowth);
-        this.autocadUsing = autocadUsing;
-        this.projectDone = projectDone;
-        this.salary = salary;
-    }
-
 
 
 }

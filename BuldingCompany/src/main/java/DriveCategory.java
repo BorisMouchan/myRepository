@@ -3,5 +3,8 @@ public enum DriveCategory {
     B,
     C,
     D,
-    E
+    E;
+
+    DriveCategory() {
+    }
 }
