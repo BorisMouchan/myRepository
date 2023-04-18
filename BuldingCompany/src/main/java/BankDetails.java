@@ -1,8 +1,13 @@
 public class BankDetails {
-    private final String billNumber="BY3014ALFA124124125";
+    private String billNumber;
+    private String city;
+    private String postAdress;
+    private String bankName;
     public CurrencyType currencyType;
-    private final String city="WARSAW";
-    private final String postAdress="ALEJ_EROSOMLINSKIE_8";
+
+    public String getBankName() {
+        return bankName;
+    }
 
     public String getBillNumber() {
         return billNumber;

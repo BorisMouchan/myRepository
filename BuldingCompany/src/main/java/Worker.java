@@ -2,6 +2,7 @@ public class Worker {
     protected String workerName;
     protected int workerAge;
     protected int workerGrowth;
+    public static int workersCount;
 
     public String getWorkerName() {
         return workerName;
@@ -25,6 +26,10 @@ public class Worker {
 
     public void setWorkerGrowth(int workerGrowth) {
         this.workerGrowth = workerGrowth;
+    }
+
+    public static int getWorkersCount() {
+        return workersCount;
     }
 
     public Worker(String workerName, int workerAge, int workerGrowth) {

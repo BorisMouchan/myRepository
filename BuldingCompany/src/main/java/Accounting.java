@@ -21,7 +21,6 @@ public class Accounting extends Structure{
         this.maxSalary = maxSalary;
     }
 
-
     public int getDayOfSalary() {
         return dayOfSalary;
     }

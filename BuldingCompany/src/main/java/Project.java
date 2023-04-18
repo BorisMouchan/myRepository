@@ -43,5 +43,9 @@ public class Project {
         this.projectCost = projectCost;
         this.architectorName = architectorName;
     }
-
+    @Override
+    public String toString() {
+        return "название проекта " + projectName + "\n" +"тип дома " + projectType + "\n" + "стоимость проекта " + projectCost
+                + "\n" + "имя архитектора " + architectorName;
+    }
 }
