@@ -1,8 +1,8 @@
 public class Electric extends Worker {
 
-    public boolean insurance;
-    public boolean accreditation;
-    public int worksYearExperience;
+    private boolean insurance;
+    private boolean accreditation;
+    private int worksYearExperience;
 
     public Electric(String workerName, int workerAge, int workerGrowth, boolean insurance, boolean accreditation, int worksYearExperience) {
         super(workerName, workerAge, workerGrowth);

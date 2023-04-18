@@ -3,6 +3,7 @@ public class Machine {
     protected String manufacterName;
     protected int purchaseYear;
     protected int warranty;
+    public static int machineCount;
 
     public Machine(String manufacterName, int purchaseYear, int warranty) {
         this.manufacterName = manufacterName;

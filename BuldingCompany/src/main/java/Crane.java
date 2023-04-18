@@ -1,6 +1,23 @@
 public class Crane extends Machine{
-    public int maxHeight;
-    public int maxWeightToUp;
+
+    private int maxHeight;
+    private int maxWeightToUp;
+
+    public int getMaxHeight() {
+        return maxHeight;
+    }
+
+    public void setMaxHeight(int maxHeight) {
+        this.maxHeight = maxHeight;
+    }
+
+    public int getMaxWeightToUp() {
+        return maxWeightToUp;
+    }
+
+    public void setMaxWeightToUp(int maxWeightToUp) {
+        this.maxWeightToUp = maxWeightToUp;
+    }
 
     public Crane(String manufacterName, int purchaseYear, int warranty, int maxHeight, int maxWeightToUp) {
         super(manufacterName, purchaseYear, warranty);

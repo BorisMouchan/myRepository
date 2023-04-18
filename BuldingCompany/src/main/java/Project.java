@@ -1,9 +1,9 @@
 public class Project {
 
-    public String projectName;
-    public ProjectType projectType;
-    public int projectCost;
-    public String architectorName;
+    private String projectName;
+    private ProjectType projectType;
+    private int projectCost;
+    private String architectorName;
 
     public String getProjectName() {
         return projectName;
