@@ -4,16 +4,19 @@ public class Marketing extends StructureUnit{
     private int totalAdvertisingCost;
     public AdvertisingType advertisingType;
 
+    public Marketing(String structureName, int employersNumber, int activeAdvertisingCount, int totalAdvertisingCost, AdvertisingType advertisingType) {
+        super(structureName, employersNumber);
+        this.activeAdvertisingCount = activeAdvertisingCount;
+        this.totalAdvertisingCost = totalAdvertisingCost;
+        this.advertisingType = advertisingType;
+    }
+
     public AdvertisingType getAdvertisingType() {
         return advertisingType;
     }
 
     public void setAdvertisingType(AdvertisingType advertisingType) {
         this.advertisingType = advertisingType;
-    }
-
-    public Marketing(String structureName, int employersNumber) {
-        super(structureName, employersNumber);
     }
 
     public int getActiveAdvertisingCount() {
