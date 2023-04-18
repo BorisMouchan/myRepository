@@ -1,4 +1,4 @@
-public class Marketing extends Structure{
+public class Marketing extends StructureUnit{
 
     private int activeAdvertisingCount;
     private int totalAdvertisingCost;

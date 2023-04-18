@@ -1,17 +1,17 @@
-public class Structure {
+public class StructureUnit {
     protected String structureName;
     protected int employersNumber;
 
-    public Structure(String structureName, int employersNumber) {
+    public StructureUnit(String structureName, int employersNumber) {
         this.structureName = structureName;
         this.employersNumber = employersNumber;
     }
 
-    public String getStructureName() {
+    public String getStructureUnitName() {
         return structureName;
     }
 
-    public void setStructureName(String structureName) {
+    public void setStructureUnitName(String structureName) {
         this.structureName = structureName;
     }
 

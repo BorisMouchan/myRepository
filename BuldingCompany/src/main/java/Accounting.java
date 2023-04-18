@@ -1,4 +1,4 @@
-public class Accounting extends Structure{
+public class Accounting extends StructureUnit{
 
     private int dayOfSalary;
     private int monthSalary;
