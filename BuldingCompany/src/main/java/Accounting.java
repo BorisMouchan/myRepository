@@ -1,28 +1,28 @@
 public class Accounting extends Structure{
 
     private int dayOfSalary;
-    private int maxSalary;
+    private int monthSalary;
 
-    public Accounting(String structureName, int employersNumber, int dayOfSalary, int maxSalary) {
+    public Accounting(String structureName, int employersNumber, int dayOfSalary, int monthSalary) {
         super(structureName, employersNumber);
         this.dayOfSalary = dayOfSalary;
-        this.maxSalary = maxSalary;
+        this.monthSalary = monthSalary;
+    }
+
+    public int getDayOfSalary() {
+        return dayOfSalary;
     }
 
     public void setDayOfSalary(int dayOfSalary) {
         this.dayOfSalary = dayOfSalary;
     }
 
-    public int getMaxSalary() {
-        return maxSalary;
+    public int getMonthSalary() {
+        return monthSalary;
     }
 
-    public void setMaxSalary(int maxSalary) {
-        this.maxSalary = maxSalary;
-    }
-
-    public int getDayOfSalary() {
-        return dayOfSalary;
+    public void setMonthSalary(int monthSalary) {
+        this.monthSalary = monthSalary;
     }
 
 }
