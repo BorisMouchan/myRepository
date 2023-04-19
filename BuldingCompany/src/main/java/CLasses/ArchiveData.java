@@ -1,4 +1,6 @@
-public abstract class ArchiveData extends Department{
+package CLasses;
+
+public abstract class ArchiveData extends Department {
     public static int totalProjectsDone;
     public static int totalProjectsCost;
 

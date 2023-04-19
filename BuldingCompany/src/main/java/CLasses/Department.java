@@ -1,3 +1,5 @@
+package CLasses;
+
 public abstract class Department {
     protected String structureName;
     protected int employersNumber;
@@ -7,6 +9,7 @@ public abstract class Department {
         this.employersNumber = employersNumber;
     }
 
+    abstract void makePayments();
     public String getStructureUnitName() {
         return structureName;
     }

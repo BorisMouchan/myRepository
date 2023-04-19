@@ -1,9 +1,13 @@
-public abstract class AccountingDepartment extends Department{
+package CLasses;
 
-    private int dayOfSalary;
+import java.time.LocalDate;
+
+public class PaymentsDepartment extends Department {
+
+    private int dayOfSalary=15;
     private int monthSalary;
 
-    public AccountingDepartment(String structureName, int employersNumber, int dayOfSalary, int monthSalary) {
+    public PaymentsDepartment(String structureName, int employersNumber, int dayOfSalary, int monthSalary) {
         super(structureName, employersNumber);
         this.dayOfSalary = dayOfSalary;
         this.monthSalary = monthSalary;
@@ -23,5 +27,15 @@ public abstract class AccountingDepartment extends Department{
 
     public void setMonthSalary(int monthSalary) {
         this.monthSalary = monthSalary;
+    }
+
+    @Override
+    public void makePayments() {
+        if (dayOfSalary == LocalDate.EPOCH.getDayOfMonth()) {
+            System.out.println("Payments done! ");
+        } else {
+            System.out.println("Its not salary day :( ");
+        }
+
     }
 }

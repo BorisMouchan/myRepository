@@ -1,3 +1,5 @@
+package CLasses;
+
 public class Electric extends Employee {
 
     private boolean insurance;
@@ -35,5 +37,8 @@ public class Electric extends Employee {
         this.worksYearExperience = worksYearExperience;
     }
 
-
+    @Override
+    public void printPersonInfo() {
+        System.out.println("My electric info: " + getPersonName() +" "+ getPersonAge() + " Expirience: " + getWorksYearExperience());
+    }
 }

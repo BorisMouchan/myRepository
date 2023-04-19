@@ -1,9 +1,17 @@
+package CLasses;
+
+import enums.ProjectType;
+
+import java.util.Objects;
+
 public class Project {
 
-    private String projectName;
-    private ProjectType projectType;
-    private int projectCost;
-    private Architector architectorName;
+
+    protected String projectName;
+    protected ProjectType projectType;
+    protected int projectCost;
+    public Architector architectorName;
+
 
     public Project(String projectName, ProjectType projectType, int projectCost, Architector architectorName) {
         this.projectName = projectName;
@@ -11,6 +19,9 @@ public class Project {
         this.projectCost = projectCost;
         this.architectorName = architectorName;
     }
+
+
+
     public String getProjectName() {
         return projectName;
     }
@@ -47,6 +58,20 @@ public class Project {
     public String toString() {
         return "название проекта " + projectName + "\n" +"тип дома " + projectType + "\n" + "стоимость проекта " + projectCost
                 + "\n" + "имя архитектора " + architectorName;
+
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Project project = (Project) o;
+        return projectCost == project.projectCost && Objects.equals(projectName, project.projectName) && projectType == project.projectType && Objects.equals(architectorName, project.architectorName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(projectName, projectType, projectCost, architectorName);
     }
 }
 

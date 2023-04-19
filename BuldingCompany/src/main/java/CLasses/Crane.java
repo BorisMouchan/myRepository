@@ -1,4 +1,6 @@
-public class Crane extends Vehicles{
+package CLasses;
+
+public class Crane extends Vehicles {
 
     private int maxHeight;
     private int maxWeightToUp;
@@ -26,4 +28,8 @@ public class Crane extends Vehicles{
     }
 
 
+    @Override
+    void moveToService() {
+
+    }
 }

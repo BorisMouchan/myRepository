@@ -1,4 +1,9 @@
-public abstract class MarketingDepartment extends Department{
+package CLasses;
+
+import CLasses.Department;
+import enums.AdvertisingType;
+
+public class MarketingDepartment extends Department {
 
     private static int activeAdvertisingCount;
     private int totalAdvertisingCost;
@@ -35,4 +40,8 @@ public abstract class MarketingDepartment extends Department{
     }
 
 
+    @Override
+    void makePayments() {
+        System.out.println("Some text!");
+    }
 }

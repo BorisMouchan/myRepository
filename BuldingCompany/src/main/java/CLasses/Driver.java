@@ -1,4 +1,8 @@
-public class Driver extends Employee{
+package CLasses;
+
+import enums.DriveCategory;
+
+public class Driver extends Employee {
 
     private boolean alcoholFree;
     private DriveCategory driveCategory;
