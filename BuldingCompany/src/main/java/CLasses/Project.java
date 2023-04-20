@@ -12,15 +12,12 @@ public class Project {
     protected int projectCost;
     public Architector architectorName;
 
-
     public Project(String projectName, ProjectType projectType, int projectCost, Architector architectorName) {
         this.projectName = projectName;
         this.projectType = projectType;
         this.projectCost = projectCost;
         this.architectorName = architectorName;
     }
-
-
 
     public String getProjectName() {
         return projectName;
@@ -56,8 +53,8 @@ public class Project {
 
     @Override
     public String toString() {
-        return "название проекта " + projectName + "\n" +"тип дома " + projectType + "\n" + "стоимость проекта " + projectCost
-                + "\n" + "имя архитектора " + architectorName;
+        return "название проекта " + getProjectName() + "\n" +"тип дома " + getProjectType() + "\n" + "стоимость проекта " + getProjectCost()
+                + "\n" + "имя архитектора " + getArchitectorName();
 
     }
 
@@ -73,5 +70,7 @@ public class Project {
     public int hashCode() {
         return Objects.hash(projectName, projectType, projectCost, architectorName);
     }
+
+
 }
 

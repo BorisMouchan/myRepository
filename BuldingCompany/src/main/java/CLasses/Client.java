@@ -40,7 +40,7 @@ public class Client extends Person {
     }
 
     @Override
-   void printPersonInfo() {
+   public void printPersonInfo() {
         System.out.println("Were is my project?");
     }
 

@@ -5,11 +5,20 @@ import enums.CurrencyType;
 import java.util.Objects;
 
 public class BankDetails {
+
     private String billNumber;
     private String city;
     private String postAdress;
     private String bankName;
     public CurrencyType currencyType;
+
+    public BankDetails(String billNumber, String city, String postAdress, String bankName, CurrencyType currencyType) {
+        this.billNumber = billNumber;
+        this.city = city;
+        this.postAdress = postAdress;
+        this.bankName = bankName;
+        this.currencyType = currencyType;
+    }
 
     public String getBankName() {
         return bankName;

@@ -32,7 +32,9 @@ public class Architector extends Employee {
 
     @Override
     public String toString() {
-        return "Name: " + getPersonName()+ "\n" + "Age: " +getPersonAge() + "\n" + "id: " + getId() + "\n"+
+        return "Name: " + getPersonName()+ "\n" +
+                "Age: " +getPersonAge() + "\n" +
+                "id: " + getId() + "\n"+
                 "AutocadUsing: " + autocadUsing + "\n"+
                 "ProjectDone: " + projectDone + "\n" +
                 "Growth: " + employeeGrowth +
@@ -45,11 +47,11 @@ public class Architector extends Employee {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Architector that = (Architector) o;
-        return autocadUsing == that.autocadUsing && projectDone == that.projectDone;
+        return personAge == that.personAge && id == that.id && employeeGrowth == that.employeeGrowth && salary == that.salary && autocadUsing == that.autocadUsing && projectDone == that.projectDone && Objects.equals(personName, that.personName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), autocadUsing, projectDone);
+        return Objects.hash(super.hashCode(), personName, personAge, id, employeeGrowth, salary, autocadUsing, projectDone);
     }
 }

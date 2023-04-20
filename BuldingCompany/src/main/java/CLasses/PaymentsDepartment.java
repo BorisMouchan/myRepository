@@ -1,8 +1,10 @@
 package CLasses;
 
+import Interface.IPayments;
+
 import java.time.LocalDate;
 
-public class PaymentsDepartment extends Department {
+public class PaymentsDepartment extends Department implements IPayments {
 
     private int dayOfSalary=15;
     private int monthSalary;
@@ -29,6 +31,7 @@ public class PaymentsDepartment extends Department {
         this.monthSalary = monthSalary;
     }
 
+
     @Override
     public void makePayments() {
         if (dayOfSalary == LocalDate.EPOCH.getDayOfMonth()) {
@@ -37,5 +40,10 @@ public class PaymentsDepartment extends Department {
             System.out.println("Its not salary day :( ");
         }
 
+    }
+
+    @Override
+    protected void getResultsOfMonth() {
+        System.out.println("Total month salary " + getMonthSalary());
     }
 }

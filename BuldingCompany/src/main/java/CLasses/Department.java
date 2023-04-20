@@ -9,7 +9,6 @@ public abstract class Department {
         this.employersNumber = employersNumber;
     }
 
-    abstract void makePayments();
     public String getStructureUnitName() {
         return structureName;
     }
@@ -26,5 +25,5 @@ public abstract class Department {
         this.employersNumber = employersNumber;
     }
 
-
+    protected abstract void getResultsOfMonth();
 }

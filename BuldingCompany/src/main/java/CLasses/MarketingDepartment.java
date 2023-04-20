@@ -1,6 +1,6 @@
 package CLasses;
 
-import CLasses.Department;
+import Interface.IPayments;
 import enums.AdvertisingType;
 
 public class MarketingDepartment extends Department {
@@ -41,7 +41,9 @@ public class MarketingDepartment extends Department {
 
 
     @Override
-    void makePayments() {
-        System.out.println("Some text!");
+    protected void getResultsOfMonth() {
+        System.out.println(totalAdvertisingCost);
+        System.out.println(activeAdvertisingCount);
     }
+
 }

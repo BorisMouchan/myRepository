@@ -8,6 +8,11 @@ public class Bulldozer extends Vehicles {
     private int maxSpeed;
     private int maxWeight;
 
+    public Bulldozer(String vehicleName, int purchaseYear, boolean warranty, int maxSpeed, int maxWeight) {
+        super(vehicleName, purchaseYear, warranty);
+        this.maxSpeed = maxSpeed;
+        this.maxWeight = maxWeight;
+    }
 
     public int getMaxSpeed() {
         return maxSpeed;
@@ -25,11 +30,6 @@ public class Bulldozer extends Vehicles {
         this.maxWeight = maxWeight;
     }
 
-    public Bulldozer(String vehicleName, int purchaseYear, boolean warranty, int maxSpeed, int maxWeight) {
-        super(vehicleName, purchaseYear, warranty);
-        this.maxSpeed = maxSpeed;
-        this.maxWeight = maxWeight;
-    }
 
     @Override
     public String toString() {

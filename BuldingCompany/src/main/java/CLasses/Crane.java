@@ -1,5 +1,7 @@
 package CLasses;
 
+import java.time.LocalDate;
+
 public class Crane extends Vehicles {
 
     private int maxHeight;
@@ -29,7 +31,11 @@ public class Crane extends Vehicles {
 
 
     @Override
-    void moveToService() {
-
+    public void moveToService() {
+        if (purchaseYear < LocalDate.EPOCH.getYear()) {
+            System.out.println("To service!");
+        } else {
+            System.out.println("Warranty is over!");
+        }
     }
 }

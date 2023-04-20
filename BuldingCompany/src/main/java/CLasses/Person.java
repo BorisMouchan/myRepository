@@ -20,7 +20,7 @@ public abstract class Person {
         this.id = id;
     }
 
-    abstract void printPersonInfo();
+    public abstract void printPersonInfo();
 
     public int getId() {
         return id;

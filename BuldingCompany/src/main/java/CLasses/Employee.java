@@ -4,11 +4,13 @@ import java.util.Objects;
 
 public class Employee extends Person {
 
-
     protected int employeeGrowth;
     protected int salary;
     public static int employersCount;
 
+    public Employee(String personName, int personAge, int id) {
+        super(personName, personAge, id);
+    }
 
     public Employee(String personName, int personAge, int id, int employeeGrowth, int salary) {
         super(personName, personAge, id);
@@ -62,7 +64,7 @@ public class Employee extends Person {
     }
 
     public void printPersonInfo() {
-        System.out.println("PrintPersonalInfo");
+        System.out.println("Employee " + getPersonName()+  "personal info");
     }
 
 }
