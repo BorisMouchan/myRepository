@@ -1,8 +1,8 @@
 package CLasses;
 
 public class ArchiveData extends Department {
-    public static int totalProjectsDone;
-    public static int totalProjectsCost;
+    private static int totalProjectsDone;
+    private static int totalProjectsCost;
 
     public ArchiveData(String structureName, int employersNumber) {
         super(structureName, employersNumber);
@@ -25,7 +25,7 @@ public class ArchiveData extends Department {
     }
 
     @Override
-    protected void getResultsOfMonth() {
+    public void getResultsOfMonth() {
         System.out.println("Total cost^ " + getTotalProjectsCost());
         System.out.println("Total projects done " + getTotalProjectsDone());
     }

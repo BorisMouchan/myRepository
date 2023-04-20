@@ -1,12 +1,16 @@
 package CLasses;
 
+import Interface.IBulding;
+import Interface.IDestroy;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Bulldozer extends Vehicles {
+public class Bulldozer extends Vehicles implements IBulding, IDestroy {
 
     private int maxSpeed;
     private int maxWeight;
+
 
     public Bulldozer(String vehicleName, int purchaseYear, boolean warranty, int maxSpeed, int maxWeight) {
         super(vehicleName, purchaseYear, warranty);
@@ -31,16 +35,7 @@ public class Bulldozer extends Vehicles {
     }
 
 
-    @Override
-    public String toString() {
-        return "Bulldozer{" +
-                "maxSpeed=" + maxSpeed +
-                ", maxWeight=" + maxWeight +
-                ", vehicleName='" + vehicleName + '\'' +
-                ", purchaseYear=" + purchaseYear +
-                ", warranty=" + warranty +
-                '}';
-    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -62,6 +57,17 @@ public class Bulldozer extends Vehicles {
         } else {
             System.out.println("Warranty is over!");
         }
+    }
+
+
+    @Override
+    public void build() {
+        System.out.println("Building");
+    }
+
+    @Override
+    public void detroy() {
+        System.out.println("Destroy!");
     }
 }
 

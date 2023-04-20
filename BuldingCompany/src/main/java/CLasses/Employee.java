@@ -18,6 +18,11 @@ public class Employee extends Person {
         this.salary = salary;
     }
 
+    public Employee(String personName, int personAge) {
+        super(personName,personAge);
+    }
+
+
     public int getEmployeeGrowth() {
         return employeeGrowth;
     }

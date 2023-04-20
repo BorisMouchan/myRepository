@@ -1,11 +1,15 @@
 package CLasses;
 
+import Interface.IBulding;
+import Interface.IDestroy;
+
 import java.time.LocalDate;
 
-public class Crane extends Vehicles {
+public class Crane extends Vehicles implements IBulding, IDestroy {
 
     private int maxHeight;
     private int maxWeightToUp;
+    protected int weightToUp;
 
     public Crane(String vehicleName, int purchaseYear, boolean warranty, int maxHeight, int maxWeightToUp) {
         super(vehicleName, purchaseYear, warranty);
@@ -29,6 +33,17 @@ public class Crane extends Vehicles {
         this.maxWeightToUp = maxWeightToUp;
     }
 
+    @Override
+    public String toString() {
+        return "Crane{" +
+                "maxHeight=" + maxHeight +
+                ", maxWeightToUp=" + maxWeightToUp +
+                ", weightToUp=" + weightToUp +
+                ", vehicleName='" + vehicleName + '\'' +
+                ", purchaseYear=" + purchaseYear +
+                ", warranty=" + warranty +
+                "} " + super.toString();
+    }
 
     @Override
     public void moveToService() {
@@ -37,5 +52,17 @@ public class Crane extends Vehicles {
         } else {
             System.out.println("Warranty is over!");
         }
+    }
+
+    @Override
+    public void build() {
+        if (weightToUp<maxWeightToUp) {
+            System.out.println("Building...");
+        }
+    }
+
+    @Override
+    public void detroy() {
+        System.out.println(getVehicleName()+" cannot destroy it! ");
     }
 }

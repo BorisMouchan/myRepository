@@ -20,6 +20,11 @@ public abstract class Person {
         this.id = id;
     }
 
+    public Person(String personName, int personAge) {
+        this.personName = personName;
+        this.personAge = personAge;
+    }
+
     public abstract void printPersonInfo();
 
     public int getId() {

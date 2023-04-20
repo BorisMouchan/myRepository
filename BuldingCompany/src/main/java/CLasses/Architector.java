@@ -13,6 +13,12 @@ public class Architector extends Employee {
         this.projectDone = projectDone;
     }
 
+    public Architector(String personName, int personAge, int id) {
+        super(personName, personAge, id);
+    }
+    public Architector(String personName, int personAge) {
+        super(personName, personAge);
+    }
 
     public boolean isAutocadUsing() {
         return autocadUsing;

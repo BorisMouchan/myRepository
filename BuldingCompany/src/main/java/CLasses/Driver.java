@@ -1,8 +1,9 @@
 package CLasses;
 
+import Interface.IMoveable;
 import enums.DriveCategory;
 
-public class Driver extends Employee {
+public class Driver extends Employee implements IMoveable {
 
     private boolean alcoholFree;
     private DriveCategory driveCategory;
@@ -27,6 +28,18 @@ public class Driver extends Employee {
 
     public void setDriveCategory(DriveCategory driveCategory) {
         this.driveCategory = driveCategory;
+    }
+
+
+
+    @Override
+    public void driveTo() {
+        System.out.println("Driver "+getPersonName()+ " with " +driveCategory +" go to object! ");
+    }
+
+    @Override
+    public void goToBoss() {
+        System.out.println("Driver "+getPersonName()+ " with " +driveCategory +" go to boss! ");
     }
 
 }

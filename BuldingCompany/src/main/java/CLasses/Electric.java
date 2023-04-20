@@ -1,5 +1,7 @@
 package CLasses;
 
+import java.util.Objects;
+
 public class Electric extends Employee {
 
     private boolean insurance;
@@ -37,8 +39,28 @@ public class Electric extends Employee {
         this.worksYearExperience = worksYearExperience;
     }
 
+
+    @Override
+    public String toString() {
+        return "Electric{" +
+                "insurance=" + insurance +
+                ", accreditation=" + accreditation +
+                ", worksYearExperience=" + worksYearExperience +
+                ", employeeGrowth=" + employeeGrowth +
+                ", salary=" + salary +
+                ", personName='" + personName + '\'' +
+                ", personAge=" + personAge +
+                ", id=" + id +
+                "} " + super.toString();
+    }
+
     @Override
     public void printPersonInfo() {
         System.out.println("My electric info: " + getPersonName() +" "+ getPersonAge() + " Expirience: " + getWorksYearExperience());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), insurance, accreditation, worksYearExperience);
     }
 }
