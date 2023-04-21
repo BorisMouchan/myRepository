@@ -46,4 +46,11 @@ public class MarketingDepartment extends Department {
         System.out.println(activeAdvertisingCount);
     }
 
+    public static void addAdvertising(){
+        activeAdvertisingCount++;
+    }
+
+    public static void removeAdvertising() {
+        activeAdvertisingCount--;
+    }
 }
