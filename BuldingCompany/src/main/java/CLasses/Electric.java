@@ -8,6 +8,9 @@ public class Electric extends Employee {
     private boolean accreditation;
     private int worksYearExperience;
 
+    public Electric() {
+    }
+
     public Electric(String personName, int personAge, int salary, int id, int employeeGrowth, boolean insurance, boolean accreditation, int worksYearExperience) {
         super(personName, personAge, salary, id, employeeGrowth);
         this.insurance = insurance;
@@ -55,12 +58,12 @@ public class Electric extends Employee {
     }
 
     @Override
-    public void printPersonInfo() {
-        System.out.println("My electric info: " + getPersonName() +" "+ getPersonAge() + " Expirience: " + getWorksYearExperience());
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), insurance, accreditation, worksYearExperience);
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), insurance, accreditation, worksYearExperience);
+    public void printPersonalInfo() {
+        System.out.println("My electric info: " + getPersonName() +" "+ getPersonAge() + " Expirience: " + getWorksYearExperience());
     }
 }

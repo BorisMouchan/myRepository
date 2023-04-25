@@ -1,10 +1,18 @@
 package enums;
 
 public enum AdvertisingType {
-    GOOGLE,
-    FACEBOOK,
-    INSTAGRAM;
+    GOOGLE("GOOGLE"),
+    FACEBOOK("FACEBOOK"),
+    INSTAGRAM("INSTAGRAM");
 
-    AdvertisingType() {
+    private final String advertisingType;
+
+    AdvertisingType(String advertisingType) {
+        this.advertisingType=advertisingType;
     }
+
+    public String getAdvertisingType() {
+        return advertisingType;
+    }
+
 }

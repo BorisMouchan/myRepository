@@ -1,8 +1,10 @@
 package CLasses;
 
+import Interface.IPrintablle;
+
 import java.util.Objects;
 
-public abstract class Person {
+public abstract class Person implements IPrintablle {
 
     protected String personName;
     protected int personAge;
@@ -15,17 +17,12 @@ public abstract class Person {
     }
 
     public Person() {
-        this.personName = personName;
-        this.personAge = personAge;
-        this.id = id;
     }
 
     public Person(String personName, int personAge) {
         this.personName = personName;
         this.personAge = personAge;
     }
-
-    public abstract void printPersonInfo();
 
     public int getId() {
         return id;

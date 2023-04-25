@@ -7,6 +7,10 @@ public abstract class Vehicles {
     protected String vehicleName;
     protected int purchaseYear;
     protected boolean warranty;
+    private final int WEATHER_TO_CHANGE_TIRES = 4;
+
+    public Vehicles() {
+    }
 
     public Vehicles(String vehicleName, int purchaseYear, boolean warranty) {
         this.vehicleName = vehicleName;
@@ -39,4 +43,10 @@ public abstract class Vehicles {
     }
 
     abstract void moveToService();
+
+    public final void changeTires(){
+        if (Weather.getTodayWeather()<WEATHER_TO_CHANGE_TIRES) {
+            System.out.println("Need to change tires! ");
+        }
+    }
 }

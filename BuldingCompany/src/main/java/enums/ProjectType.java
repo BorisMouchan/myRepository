@@ -1,11 +1,18 @@
 package enums;
 
 public enum ProjectType {
-    COTTAGE,
-    LARGE_BULDING,
-    SMALL_BUILDING,
-    GARAGE;
+    COTTAGE("COTTAGE"),
+    LARGE_BULDING("LARGE BUILDING"),
+    SMALL_BUILDING("SMALL BUILDING"),
+    GARAGE("GARAGE");
 
-    ProjectType() {
+    private final String projectType;
+
+    public String getProjectType() {
+        return projectType;
+    }
+
+    ProjectType(String projectType) {
+        this.projectType = projectType;
     }
 }

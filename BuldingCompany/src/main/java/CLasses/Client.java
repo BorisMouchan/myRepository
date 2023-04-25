@@ -4,23 +4,26 @@ import java.util.Objects;
 
 public class Client extends Person {
 
-    private String personSurname;
+    private String surname;
     private String companyName;
     private int telephoneNumber;
 
+    public Client() {
+    }
+
     public Client(String personName, int personAge, int id, String personSurname, String companyName, int telephoneNumber) {
         super(personName, personAge, id);
-        this.personSurname = personSurname;
+        this.surname = personSurname;
         this.companyName = companyName;
         this.telephoneNumber = telephoneNumber;
     }
 
-    public String getPersonSurname() {
-        return personSurname;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setPersonSurname(String personSurname) {
-        this.personSurname = personSurname;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public String getCompanyName() {
@@ -40,13 +43,8 @@ public class Client extends Person {
     }
 
     @Override
-   public void printPersonInfo() {
-        System.out.println("Were is my project?");
-    }
-
-    @Override
     public String toString() {
-        return "personSurname " + personSurname + "\n" +
+        return "personSurname " + surname + "\n" +
                 "companyName " + companyName + "\n" +
                 "telephoneNumber "  + telephoneNumber +  "\n"
                  + "name " + getPersonName() +"\n"+ "age " + getPersonAge()+ "\n" + "id "+getId();
@@ -58,11 +56,16 @@ public class Client extends Person {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Client client = (Client) o;
-        return telephoneNumber == client.telephoneNumber && Objects.equals(personSurname, client.personSurname) && Objects.equals(companyName, client.companyName);
+        return telephoneNumber == client.telephoneNumber && Objects.equals(surname, client.surname) && Objects.equals(companyName, client.companyName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), personSurname, companyName, telephoneNumber);
+        return Objects.hash(super.hashCode(), surname, companyName, telephoneNumber);
+    }
+
+    @Override
+    public void printPersonalInfo() {
+        System.out.println("Were is my project?");
     }
 }

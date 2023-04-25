@@ -11,6 +11,9 @@ public class Crane extends Vehicles implements IBulding, IDestroy {
     private int maxWeightToUp;
     protected int weightToUp;
 
+    public Crane() {
+    }
+
     public Crane(String vehicleName, int purchaseYear, boolean warranty, int maxHeight, int maxWeightToUp) {
         super(vehicleName, purchaseYear, warranty);
         this.maxHeight = maxHeight;

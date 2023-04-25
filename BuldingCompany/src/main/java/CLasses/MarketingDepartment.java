@@ -9,6 +9,9 @@ public class MarketingDepartment extends Department {
     private int totalAdvertisingCost;
     public AdvertisingType advertisingType;
 
+    public MarketingDepartment() {
+    }
+
     public MarketingDepartment(String structureName, int employersNumber, int totalAdvertisingCost, AdvertisingType advertisingType) {
         super(structureName, employersNumber);
         this.totalAdvertisingCost = totalAdvertisingCost;

@@ -8,6 +8,9 @@ public class Driver extends Employee implements IMoveable {
     private boolean alcoholFree;
     private DriveCategory driveCategory;
 
+    public Driver() {
+    }
+
     public Driver(String personName, int personAge, int salary, int id, int employeeGrowth, boolean alcoholFree, DriveCategory driveCategory) {
         super(personName, personAge, salary, id, employeeGrowth);
         this.alcoholFree = alcoholFree;

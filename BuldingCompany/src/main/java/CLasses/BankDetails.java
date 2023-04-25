@@ -13,12 +13,13 @@ public class BankDetails {
     public CurrencyType currencyType;
 
     public BankDetails(String billNumber, String city, String postAdress, String bankName, CurrencyType currencyType) {
-        this.billNumber = billNumber;
-        this.city = city;
-        this.postAdress = postAdress;
-        this.bankName = bankName;
-        this.currencyType = currencyType;
+        this.billNumber = this.billNumber;
+        this.city = this.city;
+        this.postAdress = this.postAdress;
+        this.bankName = this.bankName;
+        this.currencyType = this.currencyType;
     }
+
 
     public String getBankName() {
         return bankName;
@@ -42,10 +43,6 @@ public class BankDetails {
 
     public String getPostAdress() {
         return postAdress;
-    }
-
-    public BankDetails(CurrencyType currencyType) {
-        this.currencyType = currencyType;
     }
 
     @Override

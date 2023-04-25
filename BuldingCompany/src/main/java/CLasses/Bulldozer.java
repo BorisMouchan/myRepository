@@ -5,26 +5,33 @@ import Interface.IDestroy;
 
 import java.time.LocalDate;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Bulldozer extends Vehicles implements IBulding, IDestroy {
 
-    private int maxSpeed;
+    private final int MAX_SPEED=80;
     private int maxWeight;
+    private static int amountOfGasoline;
 
+    public Bulldozer() {
+    }
 
-    public Bulldozer(String vehicleName, int purchaseYear, boolean warranty, int maxSpeed, int maxWeight) {
+    public Bulldozer(String vehicleName, int purchaseYear, boolean warranty, int maxWeight) {
         super(vehicleName, purchaseYear, warranty);
-        this.maxSpeed = maxSpeed;
         this.maxWeight = maxWeight;
     }
 
-    public int getMaxSpeed() {
-        return maxSpeed;
+    static {
+        System.out.println("How many gasoline do ypu need? ");
+        Scanner scanner = new Scanner(System.in);
+        amountOfGasoline=scanner.nextInt();
     }
 
-    public void setMaxSpeed(int maxSpeed) {
-        this.maxSpeed = maxSpeed;
+    public int getMAX_SPEED() {
+        return MAX_SPEED;
     }
+
+
 
     public int getMaxWeight() {
         return maxWeight;
@@ -34,20 +41,17 @@ public class Bulldozer extends Vehicles implements IBulding, IDestroy {
         this.maxWeight = maxWeight;
     }
 
-
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Bulldozer bulldozer = (Bulldozer) o;
-        return purchaseYear == bulldozer.purchaseYear && warranty == bulldozer.warranty && maxSpeed == bulldozer.maxSpeed && maxWeight == bulldozer.maxWeight && Objects.equals(vehicleName, bulldozer.vehicleName);
+        return purchaseYear == bulldozer.purchaseYear && warranty == bulldozer.warranty && MAX_SPEED == bulldozer.MAX_SPEED && maxWeight == bulldozer.maxWeight && Objects.equals(vehicleName, bulldozer.vehicleName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(vehicleName, purchaseYear, warranty, maxSpeed, maxWeight);
+        return Objects.hash(vehicleName, purchaseYear, warranty, MAX_SPEED, maxWeight);
     }
 
     @Override
@@ -59,7 +63,6 @@ public class Bulldozer extends Vehicles implements IBulding, IDestroy {
         }
     }
 
-
     @Override
     public void build() {
         System.out.println("Building");
@@ -69,5 +72,7 @@ public class Bulldozer extends Vehicles implements IBulding, IDestroy {
     public void detroy() {
         System.out.println("Destroy!");
     }
+
+
 }
 

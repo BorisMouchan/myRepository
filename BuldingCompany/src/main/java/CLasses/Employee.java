@@ -1,12 +1,17 @@
 package CLasses;
 
+import Interface.IPrintablle;
+
 import java.util.Objects;
 
-public class Employee extends Person {
+public class Employee extends Person implements IPrintablle {
 
     protected int employeeGrowth;
     protected int salary;
     public static int employersCount;
+
+    public Employee() {
+    }
 
     public Employee(String personName, int personAge, int id) {
         super(personName, personAge, id);
@@ -21,7 +26,6 @@ public class Employee extends Person {
     public Employee(String personName, int personAge) {
         super(personName,personAge);
     }
-
 
     public int getEmployeeGrowth() {
         return employeeGrowth;
@@ -68,8 +72,8 @@ public class Employee extends Person {
         return Objects.hash(super.hashCode(), personName, personAge, id, employeeGrowth, salary);
     }
 
-    public void printPersonInfo() {
+    @Override
+    public void printPersonalInfo() {
         System.out.println("Employee " + getPersonName()+  "personal info");
     }
-
 }

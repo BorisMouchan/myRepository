@@ -8,6 +8,10 @@ public class PaymentsDepartment extends Department implements IPayments {
 
     private int dayOfSalary=15;
     private int monthSalary;
+    private static final int daysInYear = 365;
+
+    public PaymentsDepartment() {
+    }
 
     public PaymentsDepartment(String structureName, int employersNumber, int dayOfSalary, int monthSalary) {
         super(structureName, employersNumber);

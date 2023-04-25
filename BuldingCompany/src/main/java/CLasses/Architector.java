@@ -7,6 +7,9 @@ public class Architector extends Employee {
     private boolean autocadUsing;
     private int projectDone;
 
+    public Architector() {
+    }
+
     public Architector(String personName, int personAge, int salary, int id, int employeeGrowth, boolean autocadUsing, int projectDone) {
         super(personName, personAge, salary, id, employeeGrowth);
         this.autocadUsing = autocadUsing;
@@ -16,6 +19,7 @@ public class Architector extends Employee {
     public Architector(String personName, int personAge, int id) {
         super(personName, personAge, id);
     }
+
     public Architector(String personName, int personAge) {
         super(personName, personAge);
     }

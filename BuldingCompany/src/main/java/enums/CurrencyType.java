@@ -1,10 +1,17 @@
 package enums;
 
 public enum CurrencyType {
-    USD,
-    EUR,
-    CNY;
+    USD("USD"),
+    EUR("EUR"),
+    CNY("CNY");
 
-    CurrencyType() {
+    private final String currencyType;
+
+    public String getCurrencyType() {
+        return currencyType;
+    }
+
+    CurrencyType(String currencyType) {
+        this.currencyType=currencyType;
     }
 }

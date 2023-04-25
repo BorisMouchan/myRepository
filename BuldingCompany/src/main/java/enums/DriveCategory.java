@@ -1,12 +1,18 @@
 package enums;
 
 public enum DriveCategory {
-    A,
-    B,
-    C,
-    D,
-    E;
+    A("A"),
+    B("B"),
+    C("C"),
+    D("D");
 
-    DriveCategory() {
+    private final String driveCategory;
+
+    public String getDriveCategory() {
+        return driveCategory;
+    }
+
+    DriveCategory(String driveCategory) {
+        this.driveCategory=driveCategory;
     }
 }

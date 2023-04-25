@@ -6,13 +6,15 @@ import java.util.Objects;
 
 public class Project {
 
-
     protected String projectName;
     protected ProjectType projectType;
     protected int projectCost;
-    public Architector architectorName;
+    public String architectorName;
 
-    public Project(String projectName, ProjectType projectType, int projectCost, Architector architectorName) {
+    public Project() {
+    }
+
+    public Project(String projectName, ProjectType projectType, int projectCost, String architectorName) {
         this.projectName = projectName;
         this.projectType = projectType;
         this.projectCost = projectCost;
@@ -43,11 +45,11 @@ public class Project {
         this.projectCost = projectCost;
     }
 
-    public Architector getArchitectorName() {
+    public String getArchitectorName() {
         return architectorName;
     }
 
-    public void setArchitectorName(Architector architectorName) {
+    public void setArchitectorName(String architectorName) {
         this.architectorName = architectorName;
     }
 
