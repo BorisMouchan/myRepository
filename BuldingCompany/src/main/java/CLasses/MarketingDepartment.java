@@ -12,7 +12,7 @@ public class MarketingDepartment extends Department {
     }
 
     public MarketingDepartment(String structureName, int employersNumber, AdvertisingType advertisingType) {
-        super(structureName, employersNumber);
+        super(structureName);
         this.advertisingType = advertisingType;
     }
 

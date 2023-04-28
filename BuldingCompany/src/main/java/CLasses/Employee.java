@@ -68,4 +68,8 @@ public class Employee extends Person implements IPrintablle {
     }
 
 
+    @Override
+    public void printPersonalInfo() throws PrintNullException {
+
+    }
 }

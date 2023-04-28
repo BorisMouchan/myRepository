@@ -42,7 +42,7 @@ public class BuildingCompany {
         }
 
         try {
-            Employee emp1 = new Employee("Dima",-20);
+            Employee emp1 = new Employee("Dima",40);
         } catch (AgeException e) {
             System.out.println(e.getMessage());
             LOGGER.info(e.getMessage());

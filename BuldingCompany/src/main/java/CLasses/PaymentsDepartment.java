@@ -13,7 +13,7 @@ public class PaymentsDepartment extends Department implements IPayments {
     }
 
     public PaymentsDepartment(String structureName, int employersNumber, int dayOfSalary, int monthSalary) {
-        super(structureName, employersNumber);
+        super(structureName);
         this.dayOfSalary = dayOfSalary;
     }
 

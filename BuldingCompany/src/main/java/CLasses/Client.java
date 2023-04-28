@@ -70,5 +70,10 @@ public class Client extends Person {
     public void printPersonalInfo(String s) {
         System.out.println("Were is my project?");
     }
+
+    @Override
+    public void printPersonalInfo() throws PrintNullException {
+
+    }
 }
 
