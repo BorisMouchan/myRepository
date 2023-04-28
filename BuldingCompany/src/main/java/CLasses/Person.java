@@ -1,10 +1,12 @@
 package CLasses;
 
+import Exceptions.AgeException;
+import Exceptions.PrintNullException;
 import Interface.IPrintablle;
 
 import java.util.Objects;
 
-public abstract class Person implements IPrintablle {
+public abstract class Person implements IPrintablle{
 
     protected String personName;
     protected int personAge;
@@ -44,8 +46,11 @@ public abstract class Person implements IPrintablle {
         return personAge;
     }
 
-    public void setPersonAge(int personAge) {
-        this.personAge = personAge;
+    public void setPersonAge(int personAge) throws AgeException {
+        if (personAge <= 0 || personAge>65) {
+            throw new AgeException("Age is not correct!!! ");
+        }
+        this.personAge=personAge;
     }
 
     @Override
@@ -68,5 +73,12 @@ public abstract class Person implements IPrintablle {
     @Override
     public int hashCode() {
         return Objects.hash(personName, personAge, id);
+    }
+
+    @Override
+    public void printPersonalInfo(String s) throws PrintNullException {
+        if(s == null) {
+            throw new PrintNullException("Info is null !");
+        }
     }
 }

@@ -1,11 +1,12 @@
 package CLasses;
 
+import Exceptions.IncorectLevelBuilding;
 import Interface.IBulding;
 import Interface.IDestroy;
 
 import java.time.LocalDate;
 
-public class Crane extends Vehicles implements IBulding, IDestroy {
+public class Crane extends Vehicles implements IDestroy, IBulding{
 
     private int maxHeight;
     private int maxWeightToUp;
@@ -57,15 +58,20 @@ public class Crane extends Vehicles implements IBulding, IDestroy {
         }
     }
 
-    @Override
-    public void build() {
-        if (weightToUp<maxWeightToUp) {
-            System.out.println("Building...");
-        }
-    }
+
 
     @Override
     public void detroy() {
         System.out.println(getVehicleName()+" cannot destroy it! ");
+    }
+
+    @Override
+    public void build(int level) throws IncorectLevelBuilding {
+        if(level<=0) {
+            throw new IncorectLevelBuilding("Level cannot be zero !");
+        }
+        if (weightToUp<maxWeightToUp) {
+            System.out.println("Building...");
+        }
     }
 }

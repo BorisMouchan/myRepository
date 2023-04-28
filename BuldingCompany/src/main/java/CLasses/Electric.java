@@ -1,5 +1,7 @@
 package CLasses;
 
+import Exceptions.AgeException;
+
 import java.util.Objects;
 
 public class Electric extends Employee {
@@ -11,8 +13,9 @@ public class Electric extends Employee {
     public Electric() {
     }
 
-    public Electric(String personName, int personAge, int salary, int id, int employeeGrowth, boolean insurance, boolean accreditation, int worksYearExperience) {
+    public Electric(String personName, int personAge, int salary, int id, int employeeGrowth, boolean insurance, boolean accreditation, int worksYearExperience) throws AgeException {
         super(personName, personAge, salary, id, employeeGrowth);
+
         this.insurance = insurance;
         this.accreditation = accreditation;
         this.worksYearExperience = worksYearExperience;
@@ -63,7 +66,7 @@ public class Electric extends Employee {
     }
 
     @Override
-    public void printPersonalInfo() {
+    public void printPersonalInfo(String s) {
         System.out.println("My electric info: " + getPersonName() +" "+ getPersonAge() + " Expirience: " + getWorksYearExperience());
     }
 }

@@ -1,5 +1,7 @@
 package CLasses;
 
+import Exceptions.AgeException;
+
 import java.util.Objects;
 
 public class Architector extends Employee {
@@ -10,8 +12,11 @@ public class Architector extends Employee {
     public Architector() {
     }
 
-    public Architector(String personName, int personAge, int salary, int id, int employeeGrowth, boolean autocadUsing, int projectDone) {
+    public Architector(String personName, int personAge, int salary, int id, int employeeGrowth, boolean autocadUsing, int projectDone) throws AgeException {
         super(personName, personAge, salary, id, employeeGrowth);
+        if(personAge<0 || personAge>65) {
+            throw new AgeException("Age is not correct! ");
+        }
         this.autocadUsing = autocadUsing;
         this.projectDone = projectDone;
     }
@@ -20,8 +25,11 @@ public class Architector extends Employee {
         super(personName, personAge, id);
     }
 
-    public Architector(String personName, int personAge) {
+    public Architector(String personName, int personAge) throws AgeException {
         super(personName, personAge);
+        if(personAge<0 || personAge>65) {
+            throw new AgeException("Age is not correct! ");
+        }
     }
 
     public boolean isAutocadUsing() {

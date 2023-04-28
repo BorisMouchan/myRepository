@@ -1,5 +1,6 @@
 package CLasses;
 
+import Exceptions.AgeException;
 import Interface.IMoveable;
 import enums.DriveCategory;
 
@@ -11,8 +12,11 @@ public class Driver extends Employee implements IMoveable {
     public Driver() {
     }
 
-    public Driver(String personName, int personAge, int salary, int id, int employeeGrowth, boolean alcoholFree, DriveCategory driveCategory) {
+    public Driver(String personName, int personAge, int salary, int id, int employeeGrowth, boolean alcoholFree, DriveCategory driveCategory) throws AgeException {
         super(personName, personAge, salary, id, employeeGrowth);
+        if(personAge<0 || personAge>65) {
+            throw new AgeException("Age is not correct! ");
+        }
         this.alcoholFree = alcoholFree;
         this.driveCategory = driveCategory;
     }

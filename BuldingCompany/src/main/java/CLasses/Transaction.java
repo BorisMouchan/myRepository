@@ -1,8 +1,10 @@
 package CLasses;
 
+import Exceptions.TransactionException;
+import Interface.IPayments;
 import enums.CurrencyType;
 
-public final class Transaction extends BankDetails {
+public final class Transaction extends BankDetails implements IPayments {
 
     private String description;
     private int amount;
@@ -26,7 +28,14 @@ public final class Transaction extends BankDetails {
     }
 
     public final String getTotalTransactions(){
-        String result= "Total Transactions list: " + toString();
-        return result;
+        return "Total Transactions list: " + toString();
     }
-}
+
+
+    @Override
+    public void makePayments() throws TransactionException{
+        if (amount<0) {
+            throw new TransactionException("The amount of transaction is incorrect!");
+            }
+        }
+    }

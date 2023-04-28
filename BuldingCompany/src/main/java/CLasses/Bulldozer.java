@@ -1,5 +1,6 @@
 package CLasses;
 
+import Exceptions.NegativePurchaseYear;
 import Interface.IBulding;
 import Interface.IDestroy;
 
@@ -9,28 +10,28 @@ import java.util.Scanner;
 
 public class Bulldozer extends Vehicles implements IBulding, IDestroy {
 
-    private final int MAX_SPEED=80;
+    private final int MAX_SPEED = 80;
     private int maxWeight;
     private static int amountOfGasoline;
 
     public Bulldozer() {
     }
 
-    public Bulldozer(String vehicleName, int purchaseYear, boolean warranty, int maxWeight) {
+    public Bulldozer(String vehicleName, int purchaseYear, boolean warranty, int maxWeight) throws NegativePurchaseYear {
         super(vehicleName, purchaseYear, warranty);
         this.maxWeight = maxWeight;
+
     }
 
-    static {
-        System.out.println("How many gasoline do ypu need? ");
-        Scanner scanner = new Scanner(System.in);
-        amountOfGasoline=scanner.nextInt();
-    }
+//    static {
+//        System.out.println("How many gasoline do you need? ");
+//        Scanner scanner = new Scanner(System.in);
+//        amountOfGasoline = scanner.nextInt();
+//    }
 
     public int getMAX_SPEED() {
         return MAX_SPEED;
     }
-
 
 
     public int getMaxWeight() {
@@ -63,10 +64,6 @@ public class Bulldozer extends Vehicles implements IBulding, IDestroy {
         }
     }
 
-    @Override
-    public void build() {
-        System.out.println("Building");
-    }
 
     @Override
     public void detroy() {
@@ -74,5 +71,9 @@ public class Bulldozer extends Vehicles implements IBulding, IDestroy {
     }
 
 
+    @Override
+    public void build(int level) {
+        System.out.println("Building");
+    }
 }
 

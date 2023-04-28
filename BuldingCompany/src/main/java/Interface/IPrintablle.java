@@ -1,5 +1,8 @@
 package Interface;
 
+import Exceptions.PrintNullException;
+
 public interface IPrintablle {
-    void printPersonalInfo();
+
+    void printPersonalInfo(String s) throws PrintNullException;
 }

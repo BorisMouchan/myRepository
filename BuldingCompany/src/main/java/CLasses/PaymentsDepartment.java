@@ -44,6 +44,7 @@ public class PaymentsDepartment extends Department implements IPayments {
             System.out.println("Its not salary day :( ");
         }
 
+
     }
 
     @Override

@@ -1,5 +1,7 @@
 package CLasses;
 
+import Exceptions.PrintNullException;
+
 import java.util.Objects;
 
 public class Client extends Person {
@@ -46,8 +48,8 @@ public class Client extends Person {
     public String toString() {
         return "personSurname " + surname + "\n" +
                 "companyName " + companyName + "\n" +
-                "telephoneNumber "  + telephoneNumber +  "\n"
-                 + "name " + getPersonName() +"\n"+ "age " + getPersonAge()+ "\n" + "id "+getId();
+                "telephoneNumber " + telephoneNumber + "\n"
+                + "name " + getPersonName() + "\n" + "age " + getPersonAge() + "\n" + "id " + getId();
     }
 
     @Override
@@ -65,7 +67,8 @@ public class Client extends Person {
     }
 
     @Override
-    public void printPersonalInfo() {
+    public void printPersonalInfo(String s) {
         System.out.println("Were is my project?");
     }
 }
+

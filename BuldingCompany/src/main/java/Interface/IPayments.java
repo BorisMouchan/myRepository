@@ -1,6 +1,8 @@
 package Interface;
 
+import Exceptions.TransactionException;
+
 public interface IPayments {
-    void makePayments();
+    void makePayments()throws TransactionException;
 }
 

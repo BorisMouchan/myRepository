@@ -1,5 +1,7 @@
 package CLasses;
 
+import Exceptions.AgeException;
+import Exceptions.PrintNullException;
 import Interface.IPrintablle;
 
 import java.util.Objects;
@@ -23,8 +25,11 @@ public class Employee extends Person implements IPrintablle {
         this.salary = salary;
     }
 
-    public Employee(String personName, int personAge) {
+    public Employee(String personName, int personAge) throws AgeException {
         super(personName,personAge);
+        if(personAge<0 || personAge>65) {
+            throw new AgeException("Age is not correct! ");
+        }
     }
 
     public int getEmployeeGrowth() {
@@ -72,8 +77,5 @@ public class Employee extends Person implements IPrintablle {
         return Objects.hash(super.hashCode(), personName, personAge, id, employeeGrowth, salary);
     }
 
-    @Override
-    public void printPersonalInfo() {
-        System.out.println("Employee " + getPersonName()+  "personal info");
-    }
+
 }

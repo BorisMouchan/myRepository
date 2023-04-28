@@ -1,6 +1,9 @@
 package CLasses;
 
+import Exceptions.NegativePurchaseYear;
+
 import java.util.Objects;
+import java.util.logging.Logger;
 
 public abstract class Vehicles {
 
@@ -30,7 +33,10 @@ public abstract class Vehicles {
         return purchaseYear;
     }
 
-    public void setPurchaseYear(int purchaseYear) {
+    public void setPurchaseYear(int purchaseYear) throws NegativePurchaseYear{
+        if(purchaseYear<0) {
+            throw new NegativePurchaseYear("Be careful! Purchase year is negative! ");
+        }
         this.purchaseYear = purchaseYear;
     }
 
