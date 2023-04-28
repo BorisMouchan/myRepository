@@ -9,8 +9,8 @@ public class ArchiveData extends Department {
 
     static ArrayList<Project> projects= new ArrayList<>();
 
-    public ArchiveData(String structureName, int employersNumber) {
-        super(structureName, employersNumber);
+    public ArchiveData(String structureName) {
+        super(structureName);
     }
 
     public static int getTotalProjectsDone() {

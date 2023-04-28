@@ -14,7 +14,7 @@ public class Client extends Person {
     }
 
     public Client(String personName, int personAge, int id, String personSurname, String companyName, int telephoneNumber) {
-        super(personName, personAge, id);
+        super(personName, personAge);
         this.surname = personSurname;
         this.companyName = companyName;
         this.telephoneNumber = telephoneNumber;
@@ -49,7 +49,7 @@ public class Client extends Person {
         return "personSurname " + surname + "\n" +
                 "companyName " + companyName + "\n" +
                 "telephoneNumber " + telephoneNumber + "\n"
-                + "name " + getPersonName() + "\n" + "age " + getPersonAge() + "\n" + "id " + getId();
+                + "name " + getPersonName() + "\n" + "age " + getPersonAge() + "\n";
     }
 
     @Override

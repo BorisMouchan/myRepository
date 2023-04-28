@@ -10,28 +10,14 @@ public abstract class Person implements IPrintablle{
 
     protected String personName;
     protected int personAge;
-    protected int id;
-
-    public Person(String personName, int personAge, int id) {
-        this.personName = personName;
-        this.personAge = personAge;
-        this.id = id;
-    }
-
-    public Person() {
-    }
 
     public Person(String personName, int personAge) {
         this.personName = personName;
         this.personAge = personAge;
+
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public Person() {
     }
 
     public String getPersonName() {
@@ -58,7 +44,6 @@ public abstract class Person implements IPrintablle{
         return "Person{" +
                 "personName='" + personName + '\'' +
                 ", personAge=" + personAge +
-                ", id=" + id +
                 '}';
     }
 
@@ -67,12 +52,12 @@ public abstract class Person implements IPrintablle{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return personAge == person.personAge && id == person.id && Objects.equals(personName, person.personName);
+        return personAge == person.personAge &&  Objects.equals(personName, person.personName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(personName, personAge, id);
+        return Objects.hash(personName, personAge);
     }
 
     @Override

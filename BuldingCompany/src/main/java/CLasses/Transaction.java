@@ -8,13 +8,11 @@ public final class Transaction extends BankDetails implements IPayments {
 
     private String description;
     private int amount;
-    private int transferAdress;
 
-    public Transaction(String billNumber, String city, String postAdress, String bankName, CurrencyType currencyType, String description, int amount, int transferAdress) {
+    public Transaction(String billNumber, String city, String postAdress, String bankName, CurrencyType currencyType, String description, int amount) {
         super(billNumber, city, postAdress, bankName, currencyType);
         this.description = description;
         this.amount = amount;
-        this.transferAdress = transferAdress;
     }
 
     @Override
@@ -23,7 +21,6 @@ public final class Transaction extends BankDetails implements IPayments {
                 "currencyType=" + currencyType +
                 ", description='" + description + '\'' +
                 ", amount=" + amount +
-                ", transferAdress=" + transferAdress +
                 '}';
     }
 

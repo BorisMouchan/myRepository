@@ -48,7 +48,7 @@ public class BuildingCompany {
             LOGGER.info(e.getMessage());
         }
 
-        Transaction trns = new Transaction("213","Warsaw","aqa11","ALFA", CurrencyType.USD,"Pay",-500,30141111);
+        Transaction trns = new Transaction("213","Warsaw","aqa11","ALFA", CurrencyType.USD,"Pay",-500);
         try {
             trns.makePayments();
         } catch (TransactionException e) {

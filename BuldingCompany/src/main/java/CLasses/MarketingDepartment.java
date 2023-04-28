@@ -6,15 +6,13 @@ import enums.AdvertisingType;
 public class MarketingDepartment extends Department {
 
     private static int activeAdvertisingCount;
-    private int totalAdvertisingCost;
     public AdvertisingType advertisingType;
 
     public MarketingDepartment() {
     }
 
-    public MarketingDepartment(String structureName, int employersNumber, int totalAdvertisingCost, AdvertisingType advertisingType) {
+    public MarketingDepartment(String structureName, int employersNumber, AdvertisingType advertisingType) {
         super(structureName, employersNumber);
-        this.totalAdvertisingCost = totalAdvertisingCost;
         this.advertisingType = advertisingType;
     }
 
@@ -34,18 +32,8 @@ public class MarketingDepartment extends Department {
         this.activeAdvertisingCount = activeAdvertisingCount;
     }
 
-    public int getTotalAdvertisingCost() {
-        return totalAdvertisingCost;
-    }
-
-    public void setTotalAdvertisingCost(int totalAdvertisingCost) {
-        this.totalAdvertisingCost = totalAdvertisingCost;
-    }
-
-
     @Override
     protected void getResultsOfMonth() {
-        System.out.println(totalAdvertisingCost);
         System.out.println(activeAdvertisingCount);
     }
 
