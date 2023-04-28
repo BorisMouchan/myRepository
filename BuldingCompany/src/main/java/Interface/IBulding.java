@@ -1,9 +1,9 @@
 package Interface;
 
-import Exceptions.IncorectLevelBuilding;
+import Exceptions.IncorectLevelBuildingException;
 
 public interface IBulding {
 
-    void build(int level) throws IncorectLevelBuilding;
+    void build(int level) throws IncorectLevelBuildingException;
 
 }

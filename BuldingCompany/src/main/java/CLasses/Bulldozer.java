@@ -1,12 +1,11 @@
 package CLasses;
 
-import Exceptions.NegativePurchaseYear;
+import Exceptions.NegativePurchaseYearException;
 import Interface.IBulding;
 import Interface.IDestroy;
 
 import java.time.LocalDate;
 import java.util.Objects;
-import java.util.Scanner;
 
 public class Bulldozer extends Vehicles implements IBulding, IDestroy {
 
@@ -17,7 +16,7 @@ public class Bulldozer extends Vehicles implements IBulding, IDestroy {
     public Bulldozer() {
     }
 
-    public Bulldozer(String vehicleName, int purchaseYear, boolean warranty, int maxWeight) throws NegativePurchaseYear {
+    public Bulldozer(String vehicleName, int purchaseYear, boolean warranty, int maxWeight) throws NegativePurchaseYearException {
         super(vehicleName, purchaseYear, warranty);
         this.maxWeight = maxWeight;
 

@@ -1,6 +1,6 @@
 package CLasses;
 
-import Exceptions.IncorectLevelBuilding;
+import Exceptions.IncorectLevelBuildingException;
 import Interface.IBulding;
 import Interface.IDestroy;
 
@@ -66,9 +66,9 @@ public class Crane extends Vehicles implements IDestroy, IBulding{
     }
 
     @Override
-    public void build(int level) throws IncorectLevelBuilding {
+    public void build(int level) throws IncorectLevelBuildingException {
         if(level<=0) {
-            throw new IncorectLevelBuilding("Level cannot be zero !");
+            throw new IncorectLevelBuildingException("Level cannot be zero !");
         }
         if (weightToUp<maxWeightToUp) {
             System.out.println("Building...");
