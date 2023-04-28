@@ -14,20 +14,13 @@ public class Employee extends Person implements IPrintablle {
     public Employee() {
     }
 
-    public Employee(String personName, int personAge, int id) {
-        super(personName, personAge);
-    }
-
-    public Employee(String personName, int personAge, int id, int salary) {
+    public Employee(String personName, int personAge,  int salary) throws AgeException {
         super(personName, personAge);
         this.salary = salary;
     }
 
     public Employee(String personName, int personAge) throws AgeException {
         super(personName,personAge);
-        if(personAge<0 || personAge>65) {
-            throw new AgeException("Age is not correct! ");
-        }
     }
 
     public int getSalary() {

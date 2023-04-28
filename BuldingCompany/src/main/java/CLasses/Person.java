@@ -11,10 +11,12 @@ public abstract class Person implements IPrintablle{
     protected String personName;
     protected int personAge;
 
-    public Person(String personName, int personAge) {
+    public Person(String personName, int personAge) throws AgeException {
         this.personName = personName;
         this.personAge = personAge;
-
+        if (personAge <= 0 || personAge>65) {
+            throw new AgeException("Age is not correct!!! ");
+        }
     }
 
     public Person() {
@@ -33,9 +35,6 @@ public abstract class Person implements IPrintablle{
     }
 
     public void setPersonAge(int personAge) throws AgeException {
-        if (personAge <= 0 || personAge>65) {
-            throw new AgeException("Age is not correct!!! ");
-        }
         this.personAge=personAge;
     }
 

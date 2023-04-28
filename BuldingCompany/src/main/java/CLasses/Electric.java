@@ -14,7 +14,6 @@ public class Electric extends Employee {
 
     public Electric(String personName, int personAge, int salary, boolean insurance,  int worksYearExperience) throws AgeException {
         super(personName, personAge, salary);
-
         this.insurance = insurance;
         this.worksYearExperience = worksYearExperience;
     }

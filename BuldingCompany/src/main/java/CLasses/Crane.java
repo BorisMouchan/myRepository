@@ -1,6 +1,7 @@
 package CLasses;
 
 import Exceptions.IncorectLevelBuildingException;
+import Exceptions.NegativePurchaseYearException;
 import Interface.IBulding;
 import Interface.IDestroy;
 
@@ -15,7 +16,7 @@ public class Crane extends Vehicles implements IDestroy, IBulding{
     public Crane() {
     }
 
-    public Crane(String vehicleName, int purchaseYear, boolean warranty, int maxHeight, int maxWeightToUp) {
+    public Crane(String vehicleName, int purchaseYear, boolean warranty, int maxHeight, int maxWeightToUp) throws NegativePurchaseYearException {
         super(vehicleName, purchaseYear, warranty);
         this.maxHeight = maxHeight;
         this.maxWeightToUp = maxWeightToUp;

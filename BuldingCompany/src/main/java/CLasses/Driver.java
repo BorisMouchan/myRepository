@@ -6,18 +6,16 @@ import enums.DriveCategory;
 
 public class Driver extends Employee implements IMoveable {
 
+    public Driver(String personName, int personAge, int salary, DriveCategory driveCategory) throws AgeException {
+        super(personName, personAge,salary);
+        this.driveCategory = driveCategory;
+    }
+
     private DriveCategory driveCategory;
 
     public Driver() {
     }
 
-    public Driver(String personName, int personAge, int salary, DriveCategory driveCategory) throws AgeException {
-        super(personName, personAge, salary);
-        if(personAge<0 || personAge>65) {
-            throw new AgeException("Age is not correct! ");
-        }
-        this.driveCategory = driveCategory;
-    }
 
     public DriveCategory getDriveCategory() {
         return driveCategory;

@@ -42,7 +42,7 @@ public class BuildingCompany {
         }
 
         try {
-            Employee emp1 = new Employee("Dima",40);
+           Driver driv = new Driver("name",88,1800,DriveCategory.B);
         } catch (AgeException e) {
             System.out.println(e.getMessage());
             LOGGER.info(e.getMessage());

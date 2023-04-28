@@ -1,5 +1,6 @@
 package CLasses;
 
+import Exceptions.AgeException;
 import Exceptions.PrintNullException;
 
 import java.util.Objects;
@@ -13,7 +14,7 @@ public class Client extends Person {
     public Client() {
     }
 
-    public Client(String personName, int personAge, int id, String personSurname, String companyName, int telephoneNumber) {
+    public Client(String personName, int personAge, int id, String personSurname, String companyName, int telephoneNumber) throws AgeException {
         super(personName, personAge);
         this.surname = personSurname;
         this.companyName = companyName;

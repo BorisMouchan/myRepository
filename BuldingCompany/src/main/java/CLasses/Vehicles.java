@@ -12,10 +12,13 @@ public abstract class Vehicles {
     public Vehicles() {
     }
 
-    public Vehicles(String vehicleName, int purchaseYear, boolean warranty) {
+    public Vehicles(String vehicleName, int purchaseYear, boolean warranty) throws NegativePurchaseYearException {
         this.vehicleName = vehicleName;
         this.purchaseYear = purchaseYear;
         this.warranty = warranty;
+        if(purchaseYear<0) {
+            throw new NegativePurchaseYearException("Be careful! Purchase year is negative! ");
+        }
     }
 
     public String getVehicleName() {
@@ -31,9 +34,7 @@ public abstract class Vehicles {
     }
 
     public void setPurchaseYear(int purchaseYear) throws NegativePurchaseYearException {
-        if(purchaseYear<0) {
-            throw new NegativePurchaseYearException("Be careful! Purchase year is negative! ");
-        }
+
         this.purchaseYear = purchaseYear;
     }
 
