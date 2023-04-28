@@ -56,7 +56,7 @@ public class BuildingCompany {
             LOGGER.info(e.getMessage());
         }
 
-        File file = new File(System.getProperty("user.dir") + "/src/main/resources/input");
+        File file = new File(System.getProperty("user.dir") + "/src/main/resources/input.txt");
         String str = "";
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {
